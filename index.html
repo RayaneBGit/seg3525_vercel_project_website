@@ -1,96 +1,130 @@
-
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html> <!-- Initialisation du document HTML -->
+<html lang="fr"> <!-- Langue principale définie étant francais -->
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Rayane_b Portfolio</title>
+  <meta charset="UTF-8"> <!-- Encodage des caractères version UTF-8 -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Permet un affichage responsive -->
+  <title>Rayane_b Portfolio</title> <!-- Titre de la page qui est affiché dans l’onglet du navigateur -->
+
+  <!-- Importation du fichier JavaScript nommé main-->
   <script type="module" src="/main.js"></script>
-<!-- Bootstrap 4.6 CSS -->
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" rel="stylesheet">
-<!-- Bootstrap 4.6 JS (avec Popper + jQuery inclus dans le bundle) -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
-<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
 
+  <!-- Importation du framework CSS Bootstrap version 4.6.2-->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" rel="stylesheet">
 
-<!--Ajout du style css seulement pour les balises très général et les css pas accessible sur les balises directement-->
-<style>
-@media (min-width: 768px) and (max-width: 1168px) {
-  #text_intro {
-    font-size: 10.5px;
-  }
-}
-h1,h2,h3,h4{
-  font-family: 'Poppins', sans-serif;
-}
-body{
-  background-color: #1f2025;  
-  display: flex; 
-  flex-direction: column; 
-  min-height: 100vh;
-  font-family: 'Roboto', sans-serif;
-}
-</style>
+  <!-- Importation du bundle JavaScript Bootstrap -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Importation des icônes Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+
+  <!-- Importation de la police Poppins depuis Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
+
+  <!-- Styles CSS internes pour les éléments globaux ou non accessibles directement -->
+  <style>
+    /* Réduction de la taille du texte d’introduction sur écrans de largeurs intermédiaires */
+    @media (min-width: 768px) and (max-width: 1168px) {
+      #text_intro {
+        font-size: 10.5px;
+      }
+    }
+
+    /* Affectation de la police Poppins pour les titres */
+    h1, h2, h3, h4 {
+      font-family: 'Poppins', sans-serif;
+    }
+
+    /* Style global du body : fond sombre, structure verticale, police Roboto */
+    body {
+      background-color: #1f2025;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      font-family: 'Roboto', sans-serif;
+    }
+  </style>
 </head>
-<body class="text-white">
 
+<body class="text-white"> <!-- Couleur de texte par défaut : blanc -->
 
-  <header style="background-color: #10131f;" class= "text-center border-bottom border-2 p-5 rounded">
-    <nav class="d-flex align-items-center"  style="font-size: 20px;">
+  <!-- ======== EN-TÊTE "header" AVEC BARRE DE NAVIGATION "nav" ======== -->
+  <header style="background-color: #10131f;" class="text-center border-bottom border-2 p-5 rounded">
+    <nav class="d-flex align-items-center" style="font-size: 20px;">
+      <!-- Icône de menu (n'est pas interactive pour l’instant) -->
       <div>
         <a class="bi bi-list"></a>
       </div>
-    <div class="mx-auto">
-      <a  href="#home_page" class="mx-5 bi bi-house-door" style="color: rgb(209, 224, 235);"></a>
-      <a class="mx-5 bi bi-person" style="color: rgb(83, 144, 249);"></a>
-      <a class="mx-5 bi bi-envelope" style="color: rgb(83, 144, 249);" ></a>
-    </div>
+
+      <!-- Liens de navigation vers les différentes sections (ne sont pas interactive pour l’instant sauf la page de accueil) -->
+      <div class="mx-auto">
+        <a href="#home_page" class="mx-5 bi bi-house-door" style="color: rgb(209, 224, 235);"></a>
+        <a class="mx-5 bi bi-person" style="color: rgb(83, 144, 249);"></a>
+        <a class="mx-5 bi bi-envelope" style="color: rgb(83, 144, 249);"></a>
+      </div>
     </nav>
   </header>
+
+  <!-- ======== CONTENU PRINCIPAL ======== -->
   <main id="home_page" style="flex:1"> 
 
-  <section class="mb-5 mt-5">
-  <div class="container text-center">
-  <h1>Bienvenue à mon portfolio</h1>
-  </div>
-  </section>
+    <!-- Section d’introduction -->
+    <section class="mb-5 mt-5">
+      <div class="container text-center">
+        <h1>Bienvenue à mon portfolio</h1>
+      </div>
+    </section>
 
-  <section style="background-color: #2e303d" class="col-md-6 offset-md-3 p-0 mb-5">
- <div class="d-flex" >
-  <img src="images/profil.jpg" class="mr-3 w-100" style="max-width: 200px; height: auto;">
-  <p class="m-3" id="text_intro">
-    Je suis un étudiant en 2e année génie logiciel qui se passionne à programmer les logiciels ainsi que faire des tests automatisés.
-    En effet, je m'amuse à faire des tests scriptés qui nécessite juste l'appuie de un bouton et tout ce fait automatiquement. Avec l'outil python, ces scripts arrivent à tester un site web en quelques minutes qui prendrerait à quelqu'un 2 jours entiers pour le tester manuellement.
-    Je suis motivé à contribuer davantage à des projets futurs qui auront des aspects recherchés comme la creativité, l'inspiration et le rendu de qualité.
-  </p>
-</div>
-  </section>
+    <!-- Section de présentation du profil de portfolio du développeur -->
+    <section style="background-color: #2e303d" class="col-md-6 offset-md-3 p-0 mb-5">
+      <div class="d-flex">
+        <!-- Image de profil -->
+        <img src="images/profil.jpg" class="mr-3 w-100" style="max-width: 200px; height: auto;" alt="Photo de profil">
 
-  <section>
-    <div class="container text-center mb-5" >
-      <h2><i>Voici mes projets</i></h2>
-     <div class="row">
-      <div class="col-md-6 p-2">
-      <div class="bg-dark rounded p-5">PROJET 1</div>
+        <!-- Texte de présentation personnelle -->
+        <p class="m-3" id="text_intro">
+          Je suis un étudiant en 2e année de génie logiciel, passionné par le développement de logiciels et les tests automatisés.
+          J’aime créer des scripts de test en Python permettant d’automatiser entièrement le contrôle qualité d’un site web.
+          Ces scripts remplacent plusieurs jours de test manuel par quelques minutes d’exécution. Je suis motivé à contribuer à des projets créatifs, inspirants et de haute qualité.
+        </p>
       </div>
-      <div class="col-md-6 p-2">
-      <div class="bg-dark rounded p-5">PROJET 2</div>
-      </div>
-      <div class="col-md-6 p-2">
-      <div class="bg-dark rounded p-5">PROJET 3</div>
-      </div>
-      <div class="col-md-6 p-2">
-      <div class="bg-dark rounded p-5">PROJET 4</div>
-      </div>
-     </div>
+    </section>
 
-    </div>
-  </section>
+    <!-- Section listant les projets réalisés -->
+    <section>
+      <div class="container text-center mb-5">
+        <h2><i>Voici mes projets</i></h2>
+
+        <div class="row">
+          <!-- Projet 1 lien et présentation bref -->
+          <div class="col-md-6 p-2">
+            <div class="bg-dark rounded p-5">PROJET 1</div>
+          </div>
+
+          <!-- Projet 2 lien et présentation bref -->
+          <div class="col-md-6 p-2">
+            <div class="bg-dark rounded p-5">PROJET 2</div>
+          </div>
+
+          <!-- Projet 3 lien et présentation bref -->
+          <div class="col-md-6 p-2">
+            <div class="bg-dark rounded p-5">PROJET 3</div>
+          </div>
+
+          <!-- Projet 4 lien et présentation bref -->
+          <div class="col-md-6 p-2">
+            <div class="bg-dark rounded p-5">PROJET 4</div>
+          </div>
+        </div>
+
+      </div>
+    </section>
 
   </main>
-<footer style="background-color: #10131f;" class= "text-center border-top border-2 p-4 rounded">
-<p style="color: rgb(83, 144, 249);">© 2025 Rayane B. Tous droits réservés.</p>
-</footer>
+
+  <!-- ======== PIED DE PAGE ======== -->
+  <footer style="background-color: #10131f;" class="text-center border-top border-2 p-4 rounded">
+    <p style="color: rgb(83, 144, 249);">© 2025 Rayane B. Tous droits réservés.</p>
+  </footer>
+
 </body>
 </html>
